@@ -10,6 +10,16 @@ namespace ariel
 
     class Cowboy
     {
+    private:
+        int _boolts;
+
+    public:
+        // ctor
+        Cowboy(const string&,Point&);
+
+        //  methods
+        bool hashboolts();
+        void reload();
     };
 
 };

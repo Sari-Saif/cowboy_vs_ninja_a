@@ -7,8 +7,23 @@
 #pragma once
 namespace ariel
 {
-        class Point
+    class Point
     {
+    private:
+        // cordinates for Piont
+        double _x;
+        double _y;
+
+    public:
+        // ctor
+        Point(double, double);
+
+        // default ctor
+        Point();
+        // properties
+        double distance() const;
+        void printPont();
+        Point moveTwoards();
     };
 
 };

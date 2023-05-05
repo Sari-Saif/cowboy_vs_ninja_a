@@ -8,29 +8,23 @@
 #include <string>
 #include <iostream>
 #include "sources\Point.hpp"
-#include "sources\Character.hpp"
 using std::string;
-
 namespace ariel
 {
-
-    class Ninja
+    class Character
     {
-
     private:
         // data member's
         Point _location();
         string _name;
         int _target;
-        int _speed;
 
     public:
-        Ninja(Ninja &);
-        //  default ctor
-        Ninja();
-        // the enemy location
-        void move(Point &);
-        void slash();
+        // method's
+        bool isAlive();
+        double distance();
+        string getName();
+        Point Location();
+        void print();
     };
-
 };
