@@ -8,6 +8,7 @@
 #include "Point.hpp"
 #include <cmath>
 #include <string>
+using std::string;
 namespace ariel
 {
     class Point
@@ -16,6 +17,8 @@ namespace ariel
         // cordinates for Piont
         double _x;
         double _y;
+        const string &x;
+        const string &y;
 
     public:
         // ctor
@@ -26,6 +29,10 @@ namespace ariel
         // properties
         double distance(const Point &);
         void print();
+
+        // getter's (string value's)
+        string get_x();
+        string get_y();
         // Point moveTwoards(); -> will make change and rewrite it
     };
 

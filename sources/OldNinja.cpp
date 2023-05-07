@@ -1,2 +1,2 @@
-
- using namespace ariel;
+#include "OldNinja.hpp"
+using namespace ariel;

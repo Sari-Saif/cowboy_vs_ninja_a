@@ -9,6 +9,8 @@
 #include <iostream>
 #include "sources\Point.hpp"
 #include "sources\Character.hpp"
+using std::cout;
+using std::endl;
 using std::string;
 using namespace ariel;
 
@@ -33,13 +35,46 @@ double Character::distance(const Character *chr)
 bool Character::isAlive()
 {
 
-    // isnt final impleemntion (pass)
+    // isnt final implemention (pass)
     return true;
 }
 
 void Character::print()
 {
 
-    // TODO::
-    // if alive :name,location, points
+    if (_isAlive)
+    {
+
+        cout << "Character : [" + _name + ", "
+             << endl
+             << " nubmer of Points: " << _points << endl
+             << "location: (" << getLocation().get_x() << ", " << getLocation().get_y() << ")"
+             << " ]" << endl;
+    }
+
+    cout << "Character : [" + _name + ", "
+         << endl
+         << "location: (" << getLocation().get_x() << ", " << getLocation().get_y() << ")"
+         << " ]" << endl;
+}
+
+string &Character::getName()
+{
+    // was there problem (because the _name const and cant return it by current signture )
+    string temp = _name;
+    return temp;
+}
+
+Point &Character::getLocation()
+{
+
+    Point temp = _currlocation;
+    return temp;
+}
+
+// isnot final and the right implemention
+void Character::hit(int numberOfshoots)
+{
+
+    _points -= numberOfshoots;
 }

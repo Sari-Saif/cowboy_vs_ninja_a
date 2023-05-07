@@ -26,11 +26,19 @@ namespace ariel
         bool _isAlive;
 
     public:
+        // ctor
         Character(const string &, Point &);
         // method's
+        /* method that return if Character is alive or not */
         bool isAlive();
+        /**
+         *
+         *
+         *
+         */
         double distance(const Character *);
-        string &getName() const;
+
+        string &getName();
         Point &getLocation();
         void print();
         void hit(int);

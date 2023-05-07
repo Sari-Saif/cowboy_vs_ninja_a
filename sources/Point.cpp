@@ -1,22 +1,29 @@
 /**
  * declare about implemention and logic of the structure  program
- * https://en.cppreference.com/w/ :- url for tutorial that used
+ * :url's tutorial:
+ * https://en.cppreference.com/w/
  * https://cplusplus.com/reference/cmath/
  *@author Sari Safe
  *@since 05.05.23
  */
+
 #include <iostream>
-#include "Point.hpp"
 #include <cmath>
 #include <string>
+#include <string>
+#include "Point.hpp"
 using namespace ariel;
 using std::cout;
 using std::endl;
+using std::to_string;
 
-Point::Point(double x, double y) : _x(x), _y(y)
+// default ctor
+Point::Point(double ix, double iy) : _x(ix), _y(iy), x(to_string(ix)), y(to_string(iy))
 {
 }
-Point::Point() : _x(0), _y(0)
+
+// default ctor
+Point::Point() : _x(0), _y(0), x(to_string(0)), y(to_string(0))
 {
 }
 
@@ -31,5 +38,16 @@ double Point::distance(const Point &other)
 void Point::print()
 {
 
-    cout << "( " << _x << ", " << _y << ")" << endl;
+    cout << "( " + x + ", " + y + ")" << endl;
+}
+
+string Point::get_x()
+{
+
+    return x;
+}
+
+string Point::get_y()
+{
+    return y;
 }
