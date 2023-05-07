@@ -5,19 +5,21 @@
  */
 // to dont include the header alot, once at most
 #pragma once
+#include "Character.hpp"
 namespace ariel
 {
 
-    class Cowboy
+    class Cowboy : Character
     {
     private:
-        int _boolts;
+        int _hitPoints;
+        int number_of_boolts;
 
     public:
         // ctor
-        Cowboy(const string&,Point&);
-
+        Cowboy(const string &, Point &);
         //  methods
+        void shoot(const Character *);
         bool hashboolts();
         void reload();
     };

@@ -14,7 +14,7 @@ using std::string;
 namespace ariel
 {
 
-    class Ninja
+    class Ninja :Character
     {
 
     private:
