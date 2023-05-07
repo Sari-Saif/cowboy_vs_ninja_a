@@ -8,7 +8,7 @@
 namespace ariel
 {
 
-    class Cowboy : Character
+    class Cowboy : public Character
     {
     private:
         int _hitPoints;

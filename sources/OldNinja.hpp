@@ -5,12 +5,12 @@
  */
 // to dont include the header alot, once at most
 #pragma once
+#include "Character.hpp"
 namespace ariel
 {
 
-
-    class OldNinja{
-
+    class OldNinja : public Character
+    {
     };
 
 };
