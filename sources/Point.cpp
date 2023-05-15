@@ -4,7 +4,7 @@
  * https://en.cppreference.com/w/
  * https://cplusplus.com/reference/cmath/
  *@author Sari Safe
- *@since 05.05.23
+ *@since 15.05.23
  */
 
 #include <iostream>
@@ -17,7 +17,7 @@ using std::cout;
 using std::endl;
 using std::to_string;
 
-// default ctor
+//  ctor
 Point::Point(double ix, double iy) : _x(ix), _y(iy), x(to_string(ix)), y(to_string(iy))
 {
 }
@@ -35,10 +35,12 @@ double Point::distance(const Point &other)
     return sqrt(dx * dx + dy * dy);
 };
 
-void Point::print()
+string Point::print()
 {
 
     cout << "( " + x + ", " + y + ")" << endl;
+    string temp = "( " + to_string(_x) + ", " + to_string(_y) + ")";
+    return temp;
 }
 
 string Point::get_x()

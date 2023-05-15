@@ -1,7 +1,7 @@
 /**
  *
  *@author Sari Safe
- *@since 05.05.23
+ *@since 15.05.23
  */
 // to dont include the header alot, once at most
 #pragma once
@@ -9,8 +9,14 @@
 namespace ariel
 {
 
-    class OldNinja : public Character
+    class OldNinja : public Ninja
     {
+    private:
+
+    public:
+        OldNinja(string, Point);
+        void slash(Cowboy *);
+        void move(Cowboy *);
     };
 
 };

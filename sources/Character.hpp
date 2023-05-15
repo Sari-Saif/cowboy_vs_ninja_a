@@ -1,46 +1,26 @@
 /**
  *
  *@author Sari Safe
- *@since 05.05.23
+ *@since 15.05.23
  */
 // to dont include the header alot, once at most
 #pragma once
 #include <cmath>
 #include <string>
 #include <iostream>
-#include "sources\Point.hpp"
+#include "Point.hpp"
 using std::string;
 namespace ariel
 {
     class Character
     {
-    private:
-        // data member's
-        Point &_currlocation;
-        const string &_name;
-        // 0 value of no one
-        int _target;
-        // by default by instruction that have 110 points
-        int _points;
-        // when is created by default that true
-        bool _isAlive;
-
     public:
-        // ctor
-        Character(const string &, Point &);
-        // method's
-        /* method that return if Character is alive or not */
-        bool isAlive();
-        /**
-         *
-         *
-         *
-         */
-        double distance(const Character *);
-
-        string &getName();
-        Point &getLocation();
-        void print();
-        void hit(int);
+        virtual bool isAlive();
+        virtual double distance(const Character *);
+        virtual string getName();
+        virtual Point getLocation();
+        virtual string print();
+        virtual void hit(int);
+        virtual void setName(string name);
     };
 };

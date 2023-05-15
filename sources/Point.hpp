@@ -9,6 +9,7 @@
 #include <cmath>
 #include <string>
 using std::string;
+using std::to_string; 
 namespace ariel
 {
     class Point
@@ -28,7 +29,8 @@ namespace ariel
         Point();
         // properties
         double distance(const Point &);
-        void print();
+        //void
+        string print();
 
         // getter's (string value's)
         string get_x();

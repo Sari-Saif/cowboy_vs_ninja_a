@@ -1,14 +1,14 @@
 /**
  *
  *@author Sari Safe
- *@since 05.05.23
+ *@since 15.05.23
  */
 // to dont include the header alot, once at most
 #pragma once
 #include <string>
 #include <iostream>
-#include "sources\Point.hpp"
-#include "sources\Character.hpp"
+#include "Point.hpp"
+#include "Character.hpp"
 using std::string;
 
 namespace ariel
@@ -17,20 +17,18 @@ namespace ariel
     class Ninja : public Character
     {
 
-    private:
+    protected:
         // data member's
-        Point _location();
-        string _name;
-        int _target;
         int _speed;
+        Point _location;
+        string _name;
 
     public:
-        Ninja(Ninja &);
-        //  default ctor
+        Ninja(string, Point);
         Ninja();
-        // the enemy location
-        void move(Point &);
-        void slash();
+        // move to the enemy location
+        virtual void move(Character *);
+        virtual void slash(Character *);
     };
 
 };
