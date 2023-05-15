@@ -14,8 +14,18 @@ namespace ariel
 {
     class Character
     {
+        // Interface(Abstract class
+        // with pure virtual function)
     public:
+        /**
+         * return if Charcater is alive
+         * @return bool - true\false
+         */
         virtual bool isAlive();
+        /**
+         * the distance between this and other Character
+         * @return double
+         */
         virtual double distance(const Character *);
         virtual string getName();
         virtual Point getLocation();

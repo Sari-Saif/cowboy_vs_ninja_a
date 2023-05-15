@@ -14,9 +14,10 @@ namespace ariel
     private:
 
     public:
+        //ctor
         OldNinja(string, Point);
-        void slash(Cowboy *);
-        void move(Cowboy *);
+        //
+        
     };
 
 };

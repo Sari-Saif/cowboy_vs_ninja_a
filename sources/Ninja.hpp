@@ -16,7 +16,8 @@ namespace ariel
 
     class Ninja : public Character
     {
-
+        // Interface(Abstract class
+        // with pure virtual function)
     protected:
         // data member's
         int _speed;
@@ -24,10 +25,13 @@ namespace ariel
         string _name;
 
     public:
+        // ctor
         Ninja(string, Point);
+        // default ctor
         Ninja();
-        // move to the enemy location
+        /* move to the enemy location*/
         virtual void move(Character *);
+        /* attack the enemy */
         virtual void slash(Character *);
     };
 

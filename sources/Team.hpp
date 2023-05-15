@@ -18,8 +18,10 @@ namespace ariel
     {
     public:
         Team(Character *);
-        void add(Character);
-        bool stillAlive();
+        virtual void add(Character);
+        virtual bool stillAlive();
+        virtual void print();
+        virtual void attack(Team *);
     };
 
 };
