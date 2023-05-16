@@ -21,9 +21,15 @@ namespace ariel
         // ctor
         Cowboy(string, Point);
         //  methods
-        void shoot(const Character *);
+        void shoot(Character *player);
         bool hashboolts();
         void reload();
+        double distance(Character *) const;
+        string getName();
+        Point getLocation();
+        string print();
+        void hit(int);
+        void setName(string name);
     };
 
 };

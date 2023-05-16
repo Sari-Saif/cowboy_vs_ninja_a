@@ -5,7 +5,7 @@
  */
 // to dont include the header alot, once at most
 #pragma once
-#include "Character.hpp"
+#include "character.hpp"
 #include "Ninja.hpp"
 #include "Point.hpp"
 namespace ariel
@@ -14,6 +14,12 @@ namespace ariel
     {
     public:
         TrainedNinja(string, Point);
+        double distance(Character *) const;
+        string getName();
+        Point getLocation();
+        string print();
+        void hit(int);
+        void setName(string name);
     };
 
 };

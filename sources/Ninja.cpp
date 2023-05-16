@@ -1,4 +1,5 @@
 
+#include "Character.hpp"
 #include "Ninja.hpp"
 #include "Point.hpp"
 using namespace ariel;
@@ -14,3 +15,14 @@ Ninja::Ninja() : _location(Point())
 {
     this->_name = "default ninja ";
 }
+double Ninja::distance(Character *player) const { return 0; };
+string Ninja::getName() {}
+Point Ninja::getLocation() {}
+string Ninja::print() { return "hello"; }
+void Ninja::hit(int points) {}
+void Ninja::setName(string name) {}
+void Ninja::shoot(Character *player) {}
+bool Ninja::hashboolts() { return false; }
+void Ninja::move(Character *player) {}
+/* attack the enemy */
+void Ninja::slash(Character *player) {}

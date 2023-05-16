@@ -9,11 +9,13 @@
 #include <string>
 #include <iostream>
 #include "Point.hpp"
+#include "Ninja.hpp"
 using std::string;
 namespace ariel
 {
     class Character
     {
+
         // Interface(Abstract class
         // with pure virtual function)
     public:
@@ -26,11 +28,13 @@ namespace ariel
          * the distance between this and other Character
          * @return double
          */
-        virtual double distance(const Character *);
+        virtual double distance(Character *) const;
         virtual string getName();
         virtual Point getLocation();
         virtual string print();
         virtual void hit(int);
-        virtual void setName(string name);
+        virtual void setName(string);
+        // Character(Ninja *);
+        // Character(Cowboy *);
     };
 };

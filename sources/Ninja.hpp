@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 #include "Point.hpp"
-#include "Character.hpp"
+#include "character.hpp"
 using std::string;
 
 namespace ariel
@@ -30,9 +30,15 @@ namespace ariel
         // default ctor
         Ninja();
         /* move to the enemy location*/
-        virtual void move(Character *);
+        virtual void move(Character *player);
         /* attack the enemy */
-        virtual void slash(Character *);
+        virtual void slash(Character *player);
+        double distance(Character *) const;
+        string getName();
+        Point getLocation();
+        string print();
+        void hit(int);
+        void setName(string name);
     };
 
 };

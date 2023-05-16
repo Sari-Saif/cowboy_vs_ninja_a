@@ -5,19 +5,24 @@
  */
 // to dont include the header alot, once at most
 #pragma once
-#include "Character.hpp"
+#include "Ninja.hpp"
+using std::string;
 namespace ariel
 {
 
     class OldNinja : public Ninja
     {
     private:
-
     public:
-        //ctor
+        // ctor
         OldNinja(string, Point);
         //
-        
+        double distance(Character *) const;
+        string getName();
+        Point getLocation();
+        string print();
+        void hit(int);
+        void setName(string name);
     };
 
 };

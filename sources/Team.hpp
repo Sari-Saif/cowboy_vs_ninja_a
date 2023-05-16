@@ -7,7 +7,7 @@
 #pragma once
 #include "Cowboy.hpp"
 #include "Point.hpp"
-#include "Character.hpp"
+#include "character.hpp"
 #include "OldNinja.hpp"
 #include "YoungNinja.hpp"
 #include "Ninja.hpp"
@@ -16,9 +16,12 @@ namespace ariel
 {
     class Team
     {
+    protected:
+        Character *leader;
+
     public:
-        Team(Character *);
-        virtual void add(Character);
+        Team(ariel::Character *player);
+        virtual void add(Character *player);
         virtual bool stillAlive();
         virtual void print();
         virtual void attack(Team *);
