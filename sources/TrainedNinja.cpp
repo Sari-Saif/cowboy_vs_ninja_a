@@ -4,8 +4,8 @@
 #include "character.hpp"
 #include "Ninja.hpp"
 #include "Point.hpp"
-
-using namespace ariel;
 using std::string;
-TrainedNinja::TrainedNinja(string name, Point point) : Ninja(name, point) {}
-
+namespace ariel
+{
+    TrainedNinja::TrainedNinja(string name, Point point) : Ninja(name, point) {}
+};

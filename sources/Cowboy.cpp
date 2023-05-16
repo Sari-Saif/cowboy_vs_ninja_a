@@ -3,7 +3,7 @@
 #include "Point.hpp"
 #include "Character.hpp"
 using std::string;
-using namespace ariel;
+ namespace ariel{
 
 Cowboy::Cowboy(string Cowboy_name, Point point) : _name(Cowboy_name), _point(point)
 {
@@ -17,3 +17,4 @@ void Cowboy::hit(int points) {}
 void Cowboy::setName(string name) {}
 void Cowboy::shoot(Character *player) {}
 bool Cowboy::hashboolts() { return false; }
+ };

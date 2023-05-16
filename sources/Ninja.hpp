@@ -7,16 +7,18 @@
 #ifndef NINJA_H
 
 #define NINJA_H
+#include "Character.hpp"
+#include "Point.hpp"
+
 #include <string>
 #include <iostream>
-#include "Point.hpp"
-#include "Character.hpp"
+#include <string>
 using std::string;
 
 namespace ariel
 {
 
-    class Ninja : public ariel::Character
+    class Ninja : public Character
     {
         // Interface(Abstract class
         // with pure virtual function)
@@ -31,16 +33,16 @@ namespace ariel
         Ninja(string, Point);
         // default ctor
         Ninja();
-        /* move to the enemy location*/
-        virtual void move(Character *player);
-        /* attack the enemy */
-        virtual void slash(Character *player);
-        double distance(Character *) const;
+        double distance(Character *);
         string getName();
         Point getLocation();
         string print();
         void hit(int);
         void setName(string name);
+        /* move to the enemy location*/
+        virtual void move(Character *player);
+        /* attack the enemy */
+        virtual void slash(Character *player);
     };
 
 };

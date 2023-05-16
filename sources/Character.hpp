@@ -10,6 +10,7 @@
 #include <string>
 #include <cmath>
 #include "Ninja.hpp"
+#include "Point.hpp"
 namespace ariel
 {
     class Character
