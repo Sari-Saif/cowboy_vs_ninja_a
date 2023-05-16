@@ -4,17 +4,19 @@
  *@since 15.05.23
  */
 // to dont include the header alot, once at most
-#pragma once
+#ifndef NINJA_H
+
+#define NINJA_H
 #include <string>
 #include <iostream>
 #include "Point.hpp"
-#include "character.hpp"
+#include "Character.hpp"
 using std::string;
 
 namespace ariel
 {
 
-    class Ninja : public Character
+    class Ninja : public ariel::Character
     {
         // Interface(Abstract class
         // with pure virtual function)
@@ -42,3 +44,4 @@ namespace ariel
     };
 
 };
+#endif

@@ -4,8 +4,12 @@
  *@since 15.05.23
  */
 // to dont include the header alot, once at most
-#pragma once
+#ifndef OLDNINJA_H
+
+#define OLDNINJA_H
 #include "Ninja.hpp"
+#include "Character.hpp"
+#include "Point.hpp"
 using std::string;
 namespace ariel
 {
@@ -16,7 +20,6 @@ namespace ariel
     public:
         // ctor
         OldNinja(string, Point);
-        //
         double distance(Character *) const;
         string getName();
         Point getLocation();
@@ -26,3 +29,4 @@ namespace ariel
     };
 
 };
+#endif

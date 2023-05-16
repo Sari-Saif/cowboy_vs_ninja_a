@@ -3,11 +3,13 @@
  *@since 05.05.23
  */
 // to dont include the header alot, once at most
-#pragma once
+#ifndef POINT_H
+
+#define POINT_H
 #include <iostream>
-#include "Point.hpp"
 #include <cmath>
 #include <string>
+#include "Point.hpp"
 using std::string;
 using std::to_string; 
 namespace ariel
@@ -27,6 +29,7 @@ namespace ariel
 
         // default ctor
         Point();
+        
         // properties
         double distance(const Point &);
         //void
@@ -39,3 +42,4 @@ namespace ariel
     };
 
 };
+#endif

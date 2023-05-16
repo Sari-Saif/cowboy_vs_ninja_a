@@ -5,8 +5,10 @@
  */
 // to dont include the header alot, once at most
 #pragma once
-#include "character.hpp"
+#include "Character.hpp"
 #include "Ninja.hpp"
+#include "Point.hpp"
+using std::string;
 namespace ariel
 {
     class YoungNinja : public Ninja

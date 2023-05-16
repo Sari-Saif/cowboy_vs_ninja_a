@@ -1,6 +1,8 @@
+
 #include "Cowboy.hpp"
 #include "Point.hpp"
-#include "character.hpp"
+#include "Character.hpp"
+using std::string;
 using namespace ariel;
 
 Cowboy::Cowboy(string Cowboy_name, Point point) : _name(Cowboy_name), _point(point)
@@ -8,10 +10,10 @@ Cowboy::Cowboy(string Cowboy_name, Point point) : _name(Cowboy_name), _point(poi
 }
 
 double Cowboy::distance(Character *player) const { return 0; };
-string Cowboy::getName() {}
-Point Cowboy::getLocation() {}
+string Cowboy::getName() { return "sads"; }
+Point Cowboy::getLocation() { return Point(); }
 string Cowboy::print() { return "hello"; }
 void Cowboy::hit(int points) {}
 void Cowboy::setName(string name) {}
-void Cowboy::shoot(Character *player){}
-bool Cowboy::hashboolts(){ return false;}
+void Cowboy::shoot(Character *player) {}
+bool Cowboy::hashboolts() { return false; }

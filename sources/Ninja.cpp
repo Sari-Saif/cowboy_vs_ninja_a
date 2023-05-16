@@ -21,8 +21,5 @@ Point Ninja::getLocation() {}
 string Ninja::print() { return "hello"; }
 void Ninja::hit(int points) {}
 void Ninja::setName(string name) {}
-void Ninja::shoot(Character *player) {}
-bool Ninja::hashboolts() { return false; }
 void Ninja::move(Character *player) {}
-/* attack the enemy */
 void Ninja::slash(Character *player) {}

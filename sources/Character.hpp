@@ -3,14 +3,13 @@
  *@author Sari Safe
  *@since 15.05.23
  */
-// to dont include the header alot, once at most
-#pragma once
-#include <cmath>
-#include <string>
+#ifndef CHARACTER_H
+
+#define CHARACTER_H
 #include <iostream>
-#include "Point.hpp"
+#include <string>
+#include <cmath>
 #include "Ninja.hpp"
-using std::string;
 namespace ariel
 {
     class Character
@@ -34,7 +33,6 @@ namespace ariel
         virtual string print();
         virtual void hit(int);
         virtual void setName(string);
-        // Character(Ninja *);
-        // Character(Cowboy *);
     };
 };
+#endif

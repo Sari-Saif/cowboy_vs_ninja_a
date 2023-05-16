@@ -4,27 +4,33 @@
  *@since 15.05.23
  */
 // to dont include the header alot, once at most
-#pragma once
+#ifndef TEAM_H
+
+#define TEAM_H
 #include "Cowboy.hpp"
 #include "Point.hpp"
-#include "character.hpp"
+#include "Character.hpp"
 #include "OldNinja.hpp"
 #include "YoungNinja.hpp"
 #include "Ninja.hpp"
 #include "TrainedNinja.hpp"
+#include <vector>
+using std::vector;
 namespace ariel
 {
     class Team
     {
-    protected:
+    private:
         Character *leader;
+        vector<Character *> _members;
 
     public:
-        Team(ariel::Character *player);
-        virtual void add(Character *player);
-        virtual bool stillAlive();
-        virtual void print();
-        virtual void attack(Team *);
+        Team(Character *player);
+        void add(Character *members);
+        bool stillAlive();
+        void print();
+        void attack(Team *);
     };
 
 };
+#endif

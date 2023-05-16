@@ -3,9 +3,12 @@
  *@since 15.05.23
  */
 // to dont include the header alot, once at most
-#pragma once
+#ifndef COWBOY_H
+
+#define COWBOY_H
 #include "Character.hpp"
-using std::string;
+#include "Point.hpp"
+#include<string>
 namespace ariel
 {
 
@@ -33,3 +36,4 @@ namespace ariel
     };
 
 };
+#endif

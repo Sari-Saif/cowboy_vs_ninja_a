@@ -8,3 +8,4 @@
 using namespace ariel;
 using std::string;
 TrainedNinja::TrainedNinja(string name, Point point) : Ninja(name, point) {}
+
