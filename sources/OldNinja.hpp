@@ -16,6 +16,9 @@ namespace ariel
 
     class OldNinja : public Character, public Ninja
     {
+    private:
+        string _pname = "old ninja";
+
     public:
         // ctor
         OldNinja(string, Point);
