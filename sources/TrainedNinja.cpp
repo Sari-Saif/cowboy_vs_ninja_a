@@ -1,7 +1,7 @@
 
 
 #include "TrainedNinja.hpp"
-#include "character.hpp"
+#include "Character.hpp"
 #include "Ninja.hpp"
 #include "Point.hpp"
 using std::string;
