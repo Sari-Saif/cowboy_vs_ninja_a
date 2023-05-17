@@ -3,13 +3,12 @@
  *@since 05.05.23
  */
 // to dont include the header alot, once at most
-#ifndef POINT_H
 
-#define POINT_H
 #include <iostream>
 #include <cmath>
 #include <string>
-#include "Point.hpp"
+#include<stdio.h>
+
 using std::string;
 using std::to_string; 
 namespace ariel
@@ -42,4 +41,3 @@ namespace ariel
     };
 
 };
-#endif

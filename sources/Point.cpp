@@ -7,14 +7,12 @@
  *@since 15.05.23
  */
 
-#include <iostream>
-#include <cmath>
-#include <string>
-#include <string>
 #include "Point.hpp"
+
+
 using std::cout;
 using std::endl;
-using std::to_string;
+// using std::to_string;
 namespace ariel
 {
     //  ctor
@@ -53,4 +51,4 @@ namespace ariel
     {
         return y;
     }
-};
+}

@@ -5,45 +5,43 @@
  */
 // to dont include the header alot, once at most
 #ifndef NINJA_H
-
 #define NINJA_H
-#include "Character.hpp"
-#include "Point.hpp"
 
-#include <string>
+#include "Character.hpp"
 #include <iostream>
 #include <string>
 using std::string;
+using namespace ariel;
 
-namespace ariel
+// using namespace ariel;
+class Ninja
 {
+    // Interface(Abstract class
+    // with pure virtual function)
+protected:
+    // data member's
+    int _speed;
+    Point _location;
+    string _name;
 
-    class Ninja : public Character
+public:
+    // ctor
+    Ninja(string name, Point point) : _location(point)
     {
-        // Interface(Abstract class
-        // with pure virtual function)
-    protected:
-        // data member's
-        int _speed;
-        Point _location;
-        string _name;
-
-    public:
-        // ctor
-        Ninja(string, Point);
-        // default ctor
-        Ninja();
-        double distance(Character *);
-        string getName();
-        Point getLocation();
-        string print();
-        void hit(int);
-        void setName(string name);
-        /* move to the enemy location*/
-        virtual void move(Character *player);
-        /* attack the enemy */
-        virtual void slash(Character *player);
-    };
-
+        this->_name = name;
+        // by default
+        this->_speed = 0;
+    }
+    // default ctor
+    Ninja() : _location(Point()) { this->_name = "default ninja "; }
+    /* move to the enemy location*/
+    virtual void move(Character *player) {}
+    /* attack the enemy */
+    virtual void slash(Character *player) {}
+    virtual bool isAlive()
+    {
+        return true;
+    }
 };
-#endif
+
+#endif // NINJA_HPP

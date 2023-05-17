@@ -8,15 +8,14 @@
 
 #define OLDNINJA_H
 #include "Ninja.hpp"
-#include "Character.hpp"
-#include "Point.hpp"
+// #include "Character.hpp"
+// #include "Point.hpp"
 using std::string;
 namespace ariel
 {
 
-    class OldNinja : public Ninja
+    class OldNinja : public Character, public Ninja
     {
-    private:
     public:
         // ctor
         OldNinja(string, Point);
@@ -24,8 +23,9 @@ namespace ariel
         string getName();
         Point getLocation();
         string print();
-        void hit(int);
+        void hit(int number_hits);
         void setName(string name);
+        // methods from character
     };
 
 };

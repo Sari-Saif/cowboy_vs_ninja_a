@@ -1,7 +1,5 @@
 
 #include "YoungNinja.hpp"
-#include "Ninja.hpp"
-#include "Character.hpp"
 namespace ariel
 {
 

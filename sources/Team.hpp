@@ -7,10 +7,7 @@
 #ifndef TEAM_H
 
 #define TEAM_H
-#include "Character.hpp"
 #include "Cowboy.hpp"
-#include "Point.hpp"
-#include "Ninja.hpp"
 #include "OldNinja.hpp"
 #include "YoungNinja.hpp"
 #include "TrainedNinja.hpp"
@@ -18,6 +15,7 @@
 using std::vector;
 namespace ariel
 {
+
     class Team
     {
     private:
@@ -26,12 +24,11 @@ namespace ariel
 
     public:
         // ctor
-        Team(Character *player);
-        void add(Character *chara);
+        Team(Character *leader);
+        void add(Character *palyer);
         bool stillAlive();
         void print();
         void attack(Team *clans);
     };
-
 };
-#endif
+#endif // TEAM_HPP

@@ -6,9 +6,10 @@
 #ifndef COWBOY_H
 
 #define COWBOY_H
+
 #include "Character.hpp"
-#include "Point.hpp"
 #include<string>
+
 namespace ariel
 {
 

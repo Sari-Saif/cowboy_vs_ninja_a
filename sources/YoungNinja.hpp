@@ -4,16 +4,17 @@
  *@since 15.05.23
  */
 // to dont include the header alot, once at most
-#pragma once
-#include "Character.hpp"
+#ifndef YOUNGNINJA_HPP
+#define YOUNGNINJA_HPP
+
 #include "Ninja.hpp"
-#include "Point.hpp"
+
 using std::string;
 namespace ariel
 {
-    class YoungNinja : public Ninja
-    {
 
+    class YoungNinja : public Ninja, public Character
+    {
     public:
         // ctor
         YoungNinja(string, Point);
@@ -25,3 +26,4 @@ namespace ariel
         void setName(string name);
     };
 };
+#endif // YOUNGNINJA_HPP
