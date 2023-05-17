@@ -7,7 +7,7 @@ namespace ariel
     {
     }
     double YoungNinja::distance(Character *) const { return 0; };
-    string YoungNinja::getName() {}
+    string YoungNinja::getName() { return _name; }
     Point YoungNinja::getLocation() { return Point(); }
     string YoungNinja::print() { return "ss"; }
     void YoungNinja::hit(int num_hit) {}
