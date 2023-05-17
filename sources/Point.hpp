@@ -2,7 +2,7 @@
  *@author Sari Safe
  *@since 05.05.23
  */
-// to dont include the header alot, once at most
+
 #ifndef POINT_HPP
 #define POINT_HPP
 #include <iostream>
@@ -35,7 +35,9 @@ namespace ariel
 
         // getter's (string value's)
 
-        // Point moveTwoards(); -> will make change and rewrite it
+        Point moveTwoards(Point, Point); // ->double -raduis
+        double getx();
+        double gety();
     };
 
 };

@@ -1,5 +1,4 @@
 /**
- *
  *@author Sari Safe
  *@since 15.05.23
  */

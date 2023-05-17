@@ -8,7 +8,7 @@
 #define COWBOY_H
 
 #include "Character.hpp"
-#include<string>
+#include <string>
 
 namespace ariel
 {
@@ -34,6 +34,7 @@ namespace ariel
         string print();
         void hit(int);
         void setName(string name);
+        void move(Character *);
     };
 
 };

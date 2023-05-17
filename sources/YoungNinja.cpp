@@ -12,4 +12,5 @@ namespace ariel
     string YoungNinja::print() { return "ss"; }
     void YoungNinja::hit(int num_hit) {}
     void YoungNinja::setName(string name) {}
+    bool YoungNinja::isAlive() { return true; }
 };

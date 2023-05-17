@@ -3,7 +3,7 @@
  *@author Sari Safe
  *@since 15.05.23
  */
-// to dont include the header alot, once at most
+
 #ifndef TEAM_H
 
 #define TEAM_H

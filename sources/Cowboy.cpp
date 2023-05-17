@@ -18,4 +18,5 @@ namespace ariel
     void Cowboy::shoot(Character *player) {}
     bool Cowboy::hashboolts() { return false; }
     void Cowboy::reload() {}
+    void Cowboy::move(Character *) {}
 };

@@ -3,7 +3,7 @@
  *@author Sari Safe
  *@since 15.05.23
  */
-// to dont include the header alot, once at most
+
 #ifndef YOUNGNINJA_HPP
 #define YOUNGNINJA_HPP
 
@@ -24,6 +24,7 @@ namespace ariel
         string print();
         void hit(int);
         void setName(string name);
+        bool isAlive();
     };
 };
 #endif // YOUNGNINJA_HPP
