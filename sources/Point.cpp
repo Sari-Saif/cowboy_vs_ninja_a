@@ -38,5 +38,8 @@ namespace ariel
         string temp = "( " + to_string(_x) + ", " + to_string(_y) + ")";
         return temp;
     }
+    Point Point::moveTwoards(Point point1, Point point) { return Point(); }
+    double Point::getx() { return 0; }
+    double Point::gety() { return 0; }
 
 }
