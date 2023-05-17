@@ -22,7 +22,7 @@ public:
      * return if Charcater is alive
      * @return bool - true\false
      */
-    virtual bool isAlive();
+    virtual bool isAlive() { return true; }
     /**
      * the distance between this and other Character
      * @return double
