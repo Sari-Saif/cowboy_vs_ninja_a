@@ -19,8 +19,7 @@ namespace ariel
         // cordinates for Piont
         double _x;
         double _y;
-        const string &x;
-        const string &y;
+
 
     public:
         // ctor
@@ -35,8 +34,7 @@ namespace ariel
         string print();
 
         // getter's (string value's)
-        string get_x();
-        string get_y();
+
         // Point moveTwoards(); -> will make change and rewrite it
     };
 

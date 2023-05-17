@@ -9,19 +9,18 @@
 
 #include "Point.hpp"
 
-
 using std::cout;
 using std::endl;
 // using std::to_string;
 namespace ariel
 {
     //  ctor
-    Point::Point(double ix, double iy) : _x(ix), _y(iy), x(to_string(ix)), y(to_string(iy))
+    Point::Point(double ix, double iy) : _x(ix), _y(iy)
     {
     }
 
     // default ctor
-    Point::Point() : _x(0), _y(0), x(to_string(0)), y(to_string(0))
+    Point::Point() : _x(0), _y(0)
     {
     }
 
@@ -36,19 +35,8 @@ namespace ariel
     string Point::print()
     {
 
-        cout << "( " + x + ", " + y + ")" << endl;
         string temp = "( " + to_string(_x) + ", " + to_string(_y) + ")";
         return temp;
     }
 
-    string Point::get_x()
-    {
-
-        return x;
-    }
-
-    string Point::get_y()
-    {
-        return y;
-    }
 }
