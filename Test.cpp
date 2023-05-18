@@ -41,8 +41,12 @@ TEST_CASE("characters and edge cases ")
     Point a4(0, 5);
     Point a5(55, 5);
 
+    // constructor init
     Cowboy *cow = new Cowboy("Wafi", a);
+    CHECK(cow != NULL);
+    // constructor init
     OldNinja *Oninja = new OldNinja("hadi", a1);
+    CHECK(Oninja != NULL);
     YoungNinja *Yninja = new YoungNinja("bami", a2);
     TrainedNinja *Tninja = new TrainedNinja("sadi", a3);
     Cowboy *cow_1 = new Cowboy("lior", a4);
@@ -59,8 +63,25 @@ TEST_CASE("characters and edge cases ")
     CHECK(cow_1->getName() == "Wafi");
     CHECK(Yninja_1->getName() != "ahlam");
 
+    // if he/she in the same place and move it to her place throw
     CHECK_NOTHROW(cow->move(Tninja_1));
+    CHECK_THROWS(cow->move(Yninja_1));
+
     CHECK_NOTHROW(cow_1->move(Yninja));
+
+    // reload check
+    Cowboy *boony = new Cowboy("fani", a);
+    OldNinja *khai = new OldNinja("jaki", a1);
+
+    boony->shoot(khai);
+    boony->shoot(khai);
+    boony->shoot(khai);
+    boony->shoot(khai);
+    boony->shoot(khai);
+    boony->shoot(khai);
+    CHECK(boony->hasboolts() == false);
+    boony->reload();
+    CHECK(boony->hasboolts());
 }
 
 TEST_CASE("team init and generate ")
@@ -70,18 +91,40 @@ TEST_CASE("team init and generate ")
     Point p2(445, 50);
     Cowboy *cow = new Cowboy("mow", p1);
     Cowboy *cow_sec = new Cowboy("mewo", p);
+    // good inition
+    CHECK(cow->hasboolts());
     Team team(cow_sec); // automatic add
+    CHECK_THROWS(team.attack(&team));
+    CHECK(team.stillAlive());
     team.add(cow);
+    CHECK_THROWS(team.add(cow));
+
     team.add(new Cowboy("vadi", Point(23, 89)));
     team.add(new Cowboy("bana", Point(15, -12)));
+    team.add(new OldNinja("hadi", Point(20, 0)));
+    OldNinja *fabino = new OldNinja("hadi", Point(20, 0));
+
+    cow->shoot(fabino);
+    cow->shoot(fabino);
+    cow->shoot(fabino);
+    cow->shoot(fabino);
+    // there no more boolts
+    CHECK_FALSE(cow->hasboolts());
+
+    // the same object and have the same details
+    CHECK_THROWS(team.add(new Cowboy("bana", Point(15, -12))));
+
     CHECK(team.stillAlive() == 4);
     TrainedNinja *t_ninja = new TrainedNinja("moory", p2);
     Team team_b(t_ninja);
     team.attack(&team_b);
     team.attack(&team_b);
+    // attack him self
     CHECK_THROWS(team_b.attack(&team_b));
     team.attack(&team_b);
     team.attack(&team_b);
+    CHECK_THROWS(team.attack(NULL));
+
     CHECK(team.stillAlive() == 0);
     CHECK_THROWS(team.attack(&team_b));
 }

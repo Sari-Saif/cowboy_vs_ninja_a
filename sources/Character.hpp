@@ -32,6 +32,7 @@ public:
     virtual string print() { return "print"; }
     virtual void hit(int) {}
     virtual void setName(string) {}
+    virtual double health() { return 120; }
 };
 
 #endif // CHARACTER_HPP

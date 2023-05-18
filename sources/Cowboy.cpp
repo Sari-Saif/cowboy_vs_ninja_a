@@ -16,7 +16,7 @@ namespace ariel
     void Cowboy::hit(int points) {}
     void Cowboy::setName(string name) {}
     void Cowboy::shoot(Character *player) {}
-    bool Cowboy::hashboolts() { return false; }
+    bool Cowboy::hasboolts() { return false; }
     void Cowboy::reload() {}
     void Cowboy::move(Character *) {}
 };

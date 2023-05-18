@@ -26,7 +26,7 @@ namespace ariel
         Cowboy(string, Point);
         //  methods
         void shoot(Character *player);
-        bool hashboolts();
+        bool hasboolts();
         void reload();
         double distance(Character *) const;
         string getName();
